@@ -109,7 +109,7 @@ def student_screen():
     st.header('Login using FaceID', text_alignment='center')
     st.space()
     st.space()
-    
+
     show_registration = False
     photo_source = st.camera_input("Position your face in the center")
 
