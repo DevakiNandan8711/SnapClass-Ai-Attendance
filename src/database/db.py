@@ -34,8 +34,12 @@ def teacher_login(username, password):
 
 
 def get_all_students():
-    response = supabase.table('students').select("*").execute()
-    return response.data
+    try:
+        response = supabase.table('students').select("*").execute()
+        return response.data
+    except Exception as e:
+        print(f"Error fetching students: {e}")
+        return []
 
 def create_student(new_name, face_embedding=None, voice_embedding=None):
     import uuid

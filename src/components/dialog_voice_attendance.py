@@ -1,6 +1,6 @@
 import streamlit as st
 
-from pipelines.voice_pipelines import process_bulk_audio
+from src.pipelines.voice_pipelines import process_bulk_audio
 
 from src.database.config import supabase
 
